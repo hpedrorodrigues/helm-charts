@@ -1,0 +1,14 @@
+apiVersion: v2
+name: disturbed-cli
+description: Disturbed CLI
+version: 0.1.0
+appVersion: 1.0.9
+home: https://github.com/hpedrorodrigues/disturbed_cli
+sources:
+  - https://github.com/hpedrorodrigues/disturbed_cli
+  - https://github.com/hpedrorodrigues/helm-charts/tree/main/charts/disturbed-cli
+keywords:
+  - on-call
+  - schedule
+maintainers:
+  - name: hpedrorodrigues

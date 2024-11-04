@@ -1,0 +1,33 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: {{ template "disturbed.name" . }}
+  labels:
+    {{- include "disturbed.labels" . | nindent 4 }}
+spec:
+  concurrencyPolicy: Forbid
+  schedule: {{ .Values.cron.schedule | quote }}
+  jobTemplate:
+    spec:
+      template:
+        metadata:
+          labels:
+            {{- include "disturbed.labels" . | nindent 12 }}
+        spec:
+          restartPolicy: OnFailure
+          containers:
+            - name: {{ template "disturbed.name" . }}
+              image: disturbed
+              imagePullPolicy: IfNotPresent
+              env:
+                {{- toYaml .Values.env | nindent 16 }}
+              resources:
+                {{- toYaml .Values.resources | nindent 16 }}
+              volumeMounts:
+                - name: config-file
+                  subPath: config.yaml
+                  mountPath: {{ .Values.configuration.filePath }}
+          volumes:
+            - name: config-file
+              configMap:
+                name: {{ template "disturbed.name" . }}-config

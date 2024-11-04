@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "disturbed.name" . }}-config
+data:
+  config.yaml:
+    {{ toYaml .Values.configuration.content | nindent 4}}

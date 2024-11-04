@@ -1,0 +1,44 @@
+# Default values for `disturbed-cli`.
+
+commonLabels: {}
+
+namespace:
+  create: true
+
+cron:
+  schedule: '*/10 * * * *' # every 10m
+
+image:
+  repository: ghcr.io/hpedrorodrigues/disturbed_cli
+  # Optional. Defaults to Chart's appVersion (declared in Chart.yaml).
+  tag: ''
+
+# Optional. No resources are set by default.
+resources:
+  {}
+  # limits:
+  #   cpu: 100m
+  #   memory: 64Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 64Mi
+
+# See: https://github.com/hpedrorodrigues/disturbed_cli#configuration-file.
+configuration:
+  filePath: /app/config.yaml
+  content: ''
+
+env:
+  []
+  # - name: DISTURBED_SLACK_API_TOKEN
+  #   valueFrom:
+  #     secretKeyRef:
+  #       name: disturbed-cli
+  #       key: disturbed-cli
+  # - name: DISTURBED_OPSGENIE_API_KEY
+  #   valueFrom:
+  #     secretKeyRef:
+  #       name: disturbed-cli
+  #       key: disturbed-cli
+  # - name: DISTURBED_LOG_LEVEL
+  #   value: "INFO"
