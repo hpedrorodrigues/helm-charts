@@ -6,7 +6,7 @@ namespace:
   create: true
 
 cron:
-  schedule: '*/10 * * * *' # every 10m
+  schedule: '*/10 * * * *'
 
 image:
   repository: ghcr.io/hpedrorodrigues/disturbed_cli
