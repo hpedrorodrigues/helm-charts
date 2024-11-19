@@ -17,7 +17,7 @@ spec:
           restartPolicy: OnFailure
           containers:
             - name: {{ template "disturbed.name" . }}
-              image: disturbed
+              image: {{ template "disturbed.image" . }}
               imagePullPolicy: IfNotPresent
               env:
                 {{- toYaml .Values.env | nindent 16 }}
