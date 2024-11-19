@@ -1,7 +1,7 @@
 apiVersion: v2
 name: disturbed-cli
 description: Disturbed CLI
-version: 0.1.1
+version: 0.1.2
 appVersion: 1.0.9
 home: https://github.com/hpedrorodrigues/disturbed_cli
 sources:
