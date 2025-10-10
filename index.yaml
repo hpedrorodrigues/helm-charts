@@ -2,6 +2,24 @@ apiVersion: v1
 entries:
   disturbed-cli:
   - apiVersion: v2
+    appVersion: 1.0.36
+    created: "2025-10-10T14:48:04.301574572Z"
+    description: Disturbed CLI
+    digest: ce83176ba5d748e6f71a858b23b138413c4456c99f766d8e9e716be73b9f246a
+    home: https://github.com/hpedrorodrigues/disturbed_cli
+    keywords:
+    - on-call
+    - schedule
+    maintainers:
+    - name: hpedrorodrigues
+    name: disturbed-cli
+    sources:
+    - https://github.com/hpedrorodrigues/disturbed_cli
+    - https://github.com/hpedrorodrigues/helm-charts/tree/main/charts/disturbed-cli
+    urls:
+    - https://github.com/hpedrorodrigues/helm-charts/releases/download/disturbed-cli-0.1.4/disturbed-cli-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
     appVersion: 1.0.9
     created: "2024-11-19T22:44:57.641506494Z"
     description: Disturbed CLI
@@ -73,4 +91,4 @@ entries:
     urls:
     - https://github.com/hpedrorodrigues/helm-charts/releases/download/disturbed-cli-0.1.0/disturbed-cli-0.1.0.tgz
     version: 0.1.0
-generated: "2024-11-19T22:44:57.641522744Z"
+generated: "2025-10-10T14:48:04.301596463Z"
