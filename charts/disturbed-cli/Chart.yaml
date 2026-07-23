@@ -2,9 +2,9 @@ apiVersion: v2
 name: disturbed-cli
 description: Disturbed CLI
 # renovate: datasource=docker depName=ghcr.io/hpedrorodrigues/disturbed_cli
-version: 1.0.75
+version: 1.0.76
 # renovate: datasource=docker depName=ghcr.io/hpedrorodrigues/disturbed_cli
-appVersion: 1.0.75
+appVersion: 1.0.76
 home: https://github.com/hpedrorodrigues/disturbed_cli
 sources:
   - https://github.com/hpedrorodrigues/disturbed_cli
